@@ -5,12 +5,16 @@ import com.sda.paul.carrental.model.Car;
 
 import java.util.List;
 
-public class RentalService {
+public class CarService {
 
     private CarDao carDao = new CarDao();
 
     public Car getCar(int idCar){
         return carDao.getCar(idCar);
+    }
+
+    public Car getAllCars(int idCar){
+        return carDao.getAllCars(idCar);
     }
 
 
