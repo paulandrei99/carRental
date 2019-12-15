@@ -13,19 +13,19 @@ public class CarDao {
     public Car getCar(int idCar){
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-
         //READ
         Car car = session.get(Car.class, idCar);
         //INSERT / UPDATE
 //        session.saveOrUpdate(car);
         //DELETE
 //        session.delete(car);
-
         transaction.commit();
         session.close();
 
         return car;
     }
+
+    //Testing git
 
     public List<Car> getCarsWithEngine(int engineSize){
         Session session = HibernateUtil.getSessionFactory().openSession();
