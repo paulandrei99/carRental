@@ -11,8 +11,8 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCar;
     private String make;
-    private String gearbox;
     private String model;
+    private String gearbox;
     private String fuel;
     private int doors;
     private int engine;
@@ -21,6 +21,25 @@ public class Car {
     private String type;
     private int seats;
     private int pricePerDay;
+
+    public Car(){
+
+    }
+
+    public Car(String make, String model, String gearbox, String fuel, int doors, int engine, int power, int year, String type, int seats, int pricePerDay) {
+
+        this.make = make;
+        this.model = model;
+        this.gearbox = gearbox;
+        this.fuel = fuel;
+        this.doors = doors;
+        this.engine = engine;
+        this.power = power;
+        this.year = year;
+        this.type = type;
+        this.seats = seats;
+        this.pricePerDay = pricePerDay;
+    }
 
     public int getIdCar() {
         return idCar;
