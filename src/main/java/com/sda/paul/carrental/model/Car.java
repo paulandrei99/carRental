@@ -1,9 +1,6 @@
 package com.sda.paul.carrental.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Car {
@@ -21,12 +18,15 @@ public class Car {
     private String type;
     private int seats;
     private int pricePerDay;
+    private String status;
+    @ManyToOne
+    private Customer customer;
 
-    public Car(){
+    public Car() {
 
     }
 
-    public Car(String make, String model, String gearbox, String fuel, int doors, int engine, int power, int year, String type, int seats, int pricePerDay) {
+    public Car(String make, String model, String gearbox, String fuel, int doors, int engine, int power, int year, String type, int seats, int pricePerDay, String status) {
 
         this.make = make;
         this.model = model;
@@ -39,6 +39,15 @@ public class Car {
         this.type = type;
         this.seats = seats;
         this.pricePerDay = pricePerDay;
+        this.status = status;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public int getIdCar() {
@@ -137,13 +146,21 @@ public class Car {
         this.pricePerDay = pricePerDay;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
                 "idCar=" + idCar +
                 ", make='" + make + '\'' +
-                ", gearbox='" + gearbox + '\'' +
                 ", model='" + model + '\'' +
+                ", gearbox='" + gearbox + '\'' +
                 ", fuel='" + fuel + '\'' +
                 ", doors=" + doors +
                 ", engine=" + engine +
@@ -152,6 +169,7 @@ public class Car {
                 ", type='" + type + '\'' +
                 ", seats=" + seats +
                 ", pricePerDay=" + pricePerDay +
-                '}'+"\n";
+                ", status='" + status + '\'' +
+                '}';
     }
 }

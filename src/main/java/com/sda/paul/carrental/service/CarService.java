@@ -13,8 +13,8 @@ public class CarService {
         return carDao.getCar(idCar);
     }
 
-    public Car getAllCars(int idCar){
-        return carDao.getAllCars(idCar);
+    public List<Car> getAllCars(){
+        return carDao.getAllCars();
     }
 
 

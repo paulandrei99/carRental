@@ -74,17 +74,18 @@ public class CarDao {
         return car;
     }
 
-    public Car getAllCars(int idCar){
+    public List<Car> getAllCars(){
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
 
-        Car car = session.get(Car.class, idCar);
+        Query<Car> getCars = session.createQuery("from Car ");
+        List<Car> cars = getCars.list();
 
         transaction.commit();
         session.close();
 
-        return car;
+        return cars;
     }
 
 
