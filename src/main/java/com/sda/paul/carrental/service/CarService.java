@@ -9,16 +9,13 @@ public class CarService {
 
     private CarDao carDao = new CarDao();
 
-    public Car getCar(int idCar){
+    public Car getCar(int idCar) {
         return carDao.getCar(idCar);
     }
 
-    public List<Car> getAllCars(){
+    public List<Car> getAllCars() {
         return carDao.getAllCars();
     }
-
-
-
 
 
 }

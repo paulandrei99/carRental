@@ -10,7 +10,7 @@ import com.sda.paul.carrental.view.CarRentalMainView;
 public class Application extends CarRentalMainView {
 
     public static void main(String[] args) {
-//        Car car = new Car("BMW","1 series","automatic","diesel",4,2000,177,2006,"sedan",4,140,"free");
+//        Car car = new Car("BMW","1 series","automatic","diesel",4,2000,177,2006,"sedan",4,140,"avaible");
 
 //        CarDao carDao = new CarDao();
 //        System.out.println(carDao.getCarsWithEngine(2000));
@@ -18,21 +18,20 @@ public class Application extends CarRentalMainView {
 
 //        System.out.println(carDao.getCar(1));
 
-           /*//EDIT CAR
-        Car car = carDao.getCar(5);
-        car.setStatus("available");
+          /* //EDIT CAR
+        Car car = carDao.getCar(9);
+        car.setMake("Volkswagen");
+        car.setModel("Golf");
         carDao.editCar(car);
-            */
+          */
 
 //      carDao.deleteCar(7);
 
-
-//        Customer customer = new Customer("Raul", "Vladimir", "rvd@yahoo.com", 0721,
-//                "Str.Primariei");
+//        Customer customer = new Customer("Raul", "Vladimir", "rvd@yahoo.com", 0721, "Str.Primariei");
 //        CustomerDao customerDao = new CustomerDao();
 //        customerDao.addCustomer(customer);
 
-      CarRentalMainView.launch();
+        CarRentalMainView.launch();
 
     }
 }

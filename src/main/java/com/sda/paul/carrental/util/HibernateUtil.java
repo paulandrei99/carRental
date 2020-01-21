@@ -2,7 +2,6 @@ package com.sda.paul.carrental.util;
 
 import java.util.Properties;
 
-import com.sda.paul.carrental.model.Booking;
 import com.sda.paul.carrental.model.Car;
 import com.sda.paul.carrental.model.Customer;
 import org.hibernate.SessionFactory;
@@ -29,7 +28,6 @@ public class HibernateUtil {
                 settings.put(Environment.SHOW_SQL, "true");
                 configuration.setProperties(settings);
 
-                configuration.addAnnotatedClass(Booking.class);
                 configuration.addAnnotatedClass(Car.class);
                 configuration.addAnnotatedClass(Customer.class);
 

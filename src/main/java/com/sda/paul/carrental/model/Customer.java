@@ -18,7 +18,7 @@ public class Customer {
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
-    private List <Car> cars;
+    private List<Car> cars;
 
     public Customer() {
 

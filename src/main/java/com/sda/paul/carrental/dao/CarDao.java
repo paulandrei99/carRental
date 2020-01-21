@@ -74,7 +74,7 @@ public class CarDao {
         return car;
     }
 
-    public List<Car> getAllCars(){
+    public List<Car> getAllCars() {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

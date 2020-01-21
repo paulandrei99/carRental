@@ -30,12 +30,12 @@ public class CustomerDao {
 
         Query<Customer> query = session.createQuery("from Customer where email = ?1");
         query.setParameter(1, email);
-        Customer carsWithEngine = query.list().get(0);
+        Customer customer = query.list().get(0);
 
         transaction.commit();
         session.close();
 
-        return getCustomerWithEmail(email);
+        return customer;
     }
 
 }
